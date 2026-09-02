@@ -10,6 +10,11 @@
 #
 # The macOS app itself has no dependencies at all: no Package.swift, nothing
 # under `packages:` in project.yml. Nothing to watch there, by design.
+#
+# `labels: []` is deliberate. Naming a label Dependabot can't find makes it
+# comment on the PR asking you to create it, and an empty list is the only way
+# to say "don't label these" — omitting the key falls back to the default
+# `dependencies` label instead.
 
 version: 2
 updates:
@@ -20,8 +25,7 @@ updates:
     open-pull-requests-limit: 3
     commit-message:
       prefix: landing
-    labels:
-      - dependencies
+    labels: []
     groups:
       minor-and-patch:
         applies-to: version-updates
@@ -35,5 +39,4 @@ updates:
       interval: monthly
     commit-message:
       prefix: CI
-    labels:
-      - ci
+    labels: []
