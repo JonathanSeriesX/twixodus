@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040C76BD2BE8EBD9FACD11BC /* HydrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF42A6DDED8B5D24F6F2F6 /* HydrationStore.swift */; };
+		0C259B1A92779299D0ED5186 /* HydrationPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B805F8CC43F0EA0080A1F /* HydrationPlanner.swift */; };
+		0EF9F5A8EBC3660DBF7B46BA /* LoaderAndCLITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294453F9F3D783E55618E588 /* LoaderAndCLITests.swift */; };
+		14141078EA451553978F00E3 /* DayOneCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD87AB5F3C538F362FCA69D /* DayOneCLI.swift */; };
+		14C2DC48D974E0A3B6E521E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7920F89D5A4919A6BD33B74 /* ContentView.swift */; };
+		15C80E46C295B043642EC901 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AB84584C8256F7445A5CED /* main.swift */; };
+		1670A185574F2C37DEC21D62 /* HydrationPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B805F8CC43F0EA0080A1F /* HydrationPlanner.swift */; };
+		190FA82B62C4799EE91FFD9E /* HydrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD83F74E67363FA079F5AB59 /* HydrationEngine.swift */; };
+		19C3AA77FCB37B40C0D9D57A /* ImportHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA0C48B92E595E772C5EB6 /* ImportHistory.swift */; };
+		1B71C6263D234723B6496A6B /* ThreadSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE455F06F6F0ABBFD298BC2F /* ThreadSelection.swift */; };
+		1ECAAEB90A7E289A316041DB /* SyndicationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B0F080E6114564A5C19051 /* SyndicationClient.swift */; };
+		23A3A49F1F6C23DED7B31C7A /* DoneStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C64110C9C5674452C269C /* DoneStepView.swift */; };
+		264998D15C5542F1103BCC01 /* EntryComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EF04229EA3423CCB0D82B /* EntryComposer.swift */; };
+		297B2CCBB0CB31DD6F7A12A1 /* SyndicationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B0F080E6114564A5C19051 /* SyndicationClient.swift */; };
+		29A975ACE07F580311F55D26 /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAF8D92B8C7EBFDC16A5A8 /* ZipExtractor.swift */; };
+		2A1D35161ED6E77DDF67CF55 /* LinkExpansionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960526DE3743EF40761E2C0D /* LinkExpansionTests.swift */; };
+		2BDCA6E78EC388BE0B5686F5 /* OllamaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029271ADAA1CF58EB3757782 /* OllamaClient.swift */; };
+		320F989253309FA0EC470B83 /* EntryComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EF04229EA3423CCB0D82B /* EntryComposer.swift */; };
+		365CFCFF37F5F0A7C0A6D17F /* EntryComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08EF04229EA3423CCB0D82B /* EntryComposer.swift */; };
+		3B8B4E4407AEF9859B5BA78E /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956DFCC5291B4BA358D53E83 /* AppModel.swift */; };
+		3C6B4C7417A116D8F06E4687 /* TwitterArchiveLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA68686B36ECE3206E44B90 /* TwitterArchiveLoader.swift */; };
+		3F6D237DD9900661C01DD409 /* DayOneCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD87AB5F3C538F362FCA69D /* DayOneCLI.swift */; };
+		400ABFF8F0DFBE7160EDB06B /* ImportHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA0C48B92E595E772C5EB6 /* ImportHistory.swift */; };
+		43DEF24146C000E5F9B65BBC /* ImportEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46746F59235B7C982FBBC89F /* ImportEngineTests.swift */; };
+		44E57BBA66F264D5F05D7DFF /* EntryComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDEB01C2C79AC17A9D88007 /* EntryComposerTests.swift */; };
+		49418C4AD683C52A4872D9CF /* HydrationPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4B805F8CC43F0EA0080A1F /* HydrationPlanner.swift */; };
+		49DB9AD51FBDED8F7D66760C /* GlassStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C622F380121611100F4986B /* GlassStyle.swift */; };
+		4F013609E15A853980817D1E /* HydrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF42A6DDED8B5D24F6F2F6 /* HydrationStore.swift */; };
+		537ECE0CF8EA64ACCD0BD83D /* HydrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF42A6DDED8B5D24F6F2F6 /* HydrationStore.swift */; };
+		5705D8920001722A1A9B830B /* ImportLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666DDC5182950C6AFCAE038 /* ImportLedger.swift */; };
+		5710F8126A94D78763790C16 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3115B407C377BCF15E5FBACC /* Models.swift */; };
+		584EDA459F1E6A913459B465 /* PythonCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEF4D9BCB66DFA37CB864 /* PythonCompat.swift */; };
+		5EF048B475A0B0B73FE0625E /* ImportHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC489231D8A7E0BF838EFBC /* ImportHistoryTests.swift */; };
+		6A4842FAB20D413ED9CF9F94 /* ThreadCategorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C055F4D2E1CD8BE8B61B80 /* ThreadCategorizer.swift */; };
+		6A6A524646BC6BD201E6D8CD /* ConfigureStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9209319663BC2E50B676CB /* ConfigureStepView.swift */; };
+		71CF4ECDAB575EA650734C49 /* ArchiveLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE91ECE5E2319BE01E80E12 /* ArchiveLoading.swift */; };
+		73C3594291F082743B9EF346 /* DayOneCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD87AB5F3C538F362FCA69D /* DayOneCLI.swift */; };
+		75481876CC5DB818001AF52E /* PythonCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEF4D9BCB66DFA37CB864 /* PythonCompat.swift */; };
+		77AC052CD371F8096F124D0F /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAF8D92B8C7EBFDC16A5A8 /* ZipExtractor.swift */; };
+		7B237D6DEEC3B1FBB7AF9FC8 /* TwixodusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7681517CC38ACA28E67C090A /* TwixodusApp.swift */; };
+		7F47C721780922536B73787A /* ArchiveLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE91ECE5E2319BE01E80E12 /* ArchiveLoading.swift */; };
+		84CEF41B6E61B1233EF4867B /* ThreadSplitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1391E8D530704E3F0F6CC /* ThreadSplitterTests.swift */; };
+		89C5F63752803BECC97DB818 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3115B407C377BCF15E5FBACC /* Models.swift */; };
+		8A83898E18E319E59332EEA9 /* ThreadSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE455F06F6F0ABBFD298BC2F /* ThreadSelection.swift */; };
+		9043523F0B2414A963AF9C18 /* ThreadSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE3DD1FA16F0D7711E0F09 /* ThreadSplitter.swift */; };
+		90CA958353F3C8DD28D342C6 /* HydrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD83F74E67363FA079F5AB59 /* HydrationEngine.swift */; };
+		91DFAB6BBAB53B09273C9C8A /* OllamaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029271ADAA1CF58EB3757782 /* OllamaClient.swift */; };
+		932BC70F0877C4C5928D514D /* RetrieveStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227931DAB2441807149F22CC /* RetrieveStepView.swift */; };
+		93A87BDFEE4C553D5629060B /* HydrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD83F74E67363FA079F5AB59 /* HydrationEngine.swift */; };
+		9505D0C9AB3EFC3113C64F0F /* DropStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7BA038838E671D6CBEE921 /* DropStepView.swift */; };
+		99C9387ACF81C4C0FD3251A6 /* HydrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B4A142872C1766E43C3D1 /* HydrationOverlay.swift */; };
+		9B8520B7FDDCBA0A0DFA6DFC /* ThreadSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE455F06F6F0ABBFD298BC2F /* ThreadSelection.swift */; };
+		9B9781A33E54B4C2FF298D91 /* ImportEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2158E835265213A5FB282C /* ImportEngine.swift */; };
+		9BC151D6BF1B25BEEBAAC734 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A1A5C6E79B46E6CB7397E00B /* .swiftlint.yml */; };
+		9BE54E2896C34CCE27D3066E /* ImportHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA0C48B92E595E772C5EB6 /* ImportHistory.swift */; };
+		9C791628BC237252E3291E85 /* SyndicationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B0F080E6114564A5C19051 /* SyndicationClient.swift */; };
+		9EB07333801E39A777A6448B /* ThreadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4939B1E57B5B521D97371 /* ThreadBuilder.swift */; };
+		A03EE61D9C5579A212385546 /* OllamaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029271ADAA1CF58EB3757782 /* OllamaClient.swift */; };
+		A2B4C11D29BD4B39129EA575 /* OllamaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC63D30746DFCF8B351C809 /* OllamaClientTests.swift */; };
+		A3B721E4EAF426B787C51DF4 /* TwitterArchiveLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA68686B36ECE3206E44B90 /* TwitterArchiveLoader.swift */; };
+		A61A368D929FA3989BD443E5 /* ThreadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4939B1E57B5B521D97371 /* ThreadBuilder.swift */; };
+		AE4043C80D62440C198625C3 /* ThreadSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3BD68806DDEE3FF9931A3 /* ThreadSelectionTests.swift */; };
+		AED98E19E7CBFE3CF35C89DB /* TwitterArchiveLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA68686B36ECE3206E44B90 /* TwitterArchiveLoader.swift */; };
+		B2E5B40D0F297C82D794E3CF /* ImportStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E971D1C161580BB157C0C0D9 /* ImportStepView.swift */; };
+		B515985A96664ABA5A7695EE /* ZipExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAAF8D92B8C7EBFDC16A5A8 /* ZipExtractor.swift */; };
+		B57BF22639BB570B6F3FAD0C /* ThreadSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE3DD1FA16F0D7711E0F09 /* ThreadSplitter.swift */; };
+		B67CC1B6E5B765A15C8084F9 /* LinkExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4AD5548CA8698EA9116C0 /* LinkExpansion.swift */; };
+		B88D78A0598B9862E7A7546C /* PythonCompat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEF4D9BCB66DFA37CB864 /* PythonCompat.swift */; };
+		BE0916F8C98A263A33AAA0B0 /* HydrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8742F114DE179F207ACBDE8F /* HydrationTests.swift */; };
+		C4D691F101910E0AC8BCEF16 /* ImportLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666DDC5182950C6AFCAE038 /* ImportLedger.swift */; };
+		C562444FB103778F0F0AF49F /* Humanize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC6D1962B38E0F0D004F1FF /* Humanize.swift */; };
+		CEC737620BEC3C67BE8A058C /* LinkExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4AD5548CA8698EA9116C0 /* LinkExpansion.swift */; };
+		CEE7D5F9BBE8A6889CDB4883 /* ThreadCategorizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E8371526C53F835D74A08 /* ThreadCategorizerTests.swift */; };
+		CF762F0C6C64AC727667F694 /* ThreadBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED4939B1E57B5B521D97371 /* ThreadBuilder.swift */; };
+		D08910DE2E4115055F7979A9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3115B407C377BCF15E5FBACC /* Models.swift */; };
+		D0C9D6A0E0FD93D0CA255BDE /* ImportLedger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6666DDC5182950C6AFCAE038 /* ImportLedger.swift */; };
+		D27170435C166D722464CD8F /* ImportEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2158E835265213A5FB282C /* ImportEngine.swift */; };
+		D589584411A65023CF7E2C37 /* LinkExpansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4AD5548CA8698EA9116C0 /* LinkExpansion.swift */; };
+		DA3C514C27792220366F398E /* ThreadSplitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BE3DD1FA16F0D7711E0F09 /* ThreadSplitter.swift */; };
+		E21DE23A13AF07E4170A0502 /* HydrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B4A142872C1766E43C3D1 /* HydrationOverlay.swift */; };
+		E424E765B8AFF85CA358DDC2 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 460A2C5AE3585C3C47E70393 /* AppIcon.icon */; };
+		E5B1851ED93F9D13A3EB996D /* Humanize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC6D1962B38E0F0D004F1FF /* Humanize.swift */; };
+		EBA2A0B6F21B8DC73ECFC269 /* ThreadBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F132C5147E7A20A6527155D5 /* ThreadBuilderTests.swift */; };
+		EC562589A878B19A684FE114 /* Humanize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC6D1962B38E0F0D004F1FF /* Humanize.swift */; };
+		EC6D12258A0B14D3B96BCDCF /* ArchiveLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE91ECE5E2319BE01E80E12 /* ArchiveLoading.swift */; };
+		EC6F56BB72CAFEFFD6121A24 /* OllamaStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C342A93F458E978CCD5967 /* OllamaStatus.swift */; };
+		ECC0AECCC7C3896E88F856C2 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF8928A0555112E99AECE4 /* AppSettings.swift */; };
+		EDCED94C5C1199C6B54C7F6C /* ImportEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2158E835265213A5FB282C /* ImportEngine.swift */; };
+		EDD1F806A550BD548C6269B5 /* HydrationOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44B4A142872C1766E43C3D1 /* HydrationOverlay.swift */; };
+		F3FB004FC73A0F00AEC18621 /* ThreadCategorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C055F4D2E1CD8BE8B61B80 /* ThreadCategorizer.swift */; };
+		FBD1B70B9061F9100830D5F7 /* ThreadCategorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C055F4D2E1CD8BE8B61B80 /* ThreadCategorizer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		019E8371526C53F835D74A08 /* ThreadCategorizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCategorizerTests.swift; sourceTree = "<group>"; };
+		029271ADAA1CF58EB3757782 /* OllamaClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaClient.swift; sourceTree = "<group>"; };
+		0D4B805F8CC43F0EA0080A1F /* HydrationPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationPlanner.swift; sourceTree = "<group>"; };
+		0D9209319663BC2E50B676CB /* ConfigureStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureStepView.swift; sourceTree = "<group>"; };
+		0EE91ECE5E2319BE01E80E12 /* ArchiveLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveLoading.swift; sourceTree = "<group>"; };
+		0F7BA038838E671D6CBEE921 /* DropStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropStepView.swift; sourceTree = "<group>"; };
+		13A3BD68806DDEE3FF9931A3 /* ThreadSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSelectionTests.swift; sourceTree = "<group>"; };
+		16C342A93F458E978CCD5967 /* OllamaStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaStatus.swift; sourceTree = "<group>"; };
+		1DC63D30746DFCF8B351C809 /* OllamaClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaClientTests.swift; sourceTree = "<group>"; };
+		227931DAB2441807149F22CC /* RetrieveStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveStepView.swift; sourceTree = "<group>"; };
+		22F4AD5548CA8698EA9116C0 /* LinkExpansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExpansion.swift; sourceTree = "<group>"; };
+		26AB84584C8256F7445A5CED /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		294453F9F3D783E55618E588 /* LoaderAndCLITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderAndCLITests.swift; sourceTree = "<group>"; };
+		2CBF42A6DDED8B5D24F6F2F6 /* HydrationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationStore.swift; sourceTree = "<group>"; };
+		2EA68686B36ECE3206E44B90 /* TwitterArchiveLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterArchiveLoader.swift; sourceTree = "<group>"; };
+		2FB1391E8D530704E3F0F6CC /* ThreadSplitterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSplitterTests.swift; sourceTree = "<group>"; };
+		3115B407C377BCF15E5FBACC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		40708F4BE27A5BA385953BAE /* twixodus-dump */ = {isa = PBXFileReference; includeInIndex = 0; path = "twixodus-dump"; sourceTree = BUILT_PRODUCTS_DIR; };
+		460A2C5AE3585C3C47E70393 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = wrapper.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		46746F59235B7C982FBBC89F /* ImportEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportEngineTests.swift; sourceTree = "<group>"; };
+		4C622F380121611100F4986B /* GlassStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassStyle.swift; sourceTree = "<group>"; };
+		566C64110C9C5674452C269C /* DoneStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneStepView.swift; sourceTree = "<group>"; };
+		6666DDC5182950C6AFCAE038 /* ImportLedger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportLedger.swift; sourceTree = "<group>"; };
+		68BE3DD1FA16F0D7711E0F09 /* ThreadSplitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSplitter.swift; sourceTree = "<group>"; };
+		7681517CC38ACA28E67C090A /* TwixodusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwixodusApp.swift; sourceTree = "<group>"; };
+		79C055F4D2E1CD8BE8B61B80 /* ThreadCategorizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCategorizer.swift; sourceTree = "<group>"; };
+		7A2158E835265213A5FB282C /* ImportEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportEngine.swift; sourceTree = "<group>"; };
+		7DFF8928A0555112E99AECE4 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		8742F114DE179F207ACBDE8F /* HydrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationTests.swift; sourceTree = "<group>"; };
+		956DFCC5291B4BA358D53E83 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		960526DE3743EF40761E2C0D /* LinkExpansionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkExpansionTests.swift; sourceTree = "<group>"; };
+		9FC489231D8A7E0BF838EFBC /* ImportHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHistoryTests.swift; sourceTree = "<group>"; };
+		A08EF04229EA3423CCB0D82B /* EntryComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryComposer.swift; sourceTree = "<group>"; };
+		A1A5C6E79B46E6CB7397E00B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A44B4A142872C1766E43C3D1 /* HydrationOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationOverlay.swift; sourceTree = "<group>"; };
+		ACF6028D7787BA8B3A9A9C7B /* TwixodusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwixodusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD87AB5F3C538F362FCA69D /* DayOneCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOneCLI.swift; sourceTree = "<group>"; };
+		C1EA0C48B92E595E772C5EB6 /* ImportHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHistory.swift; sourceTree = "<group>"; };
+		C6B0F080E6114564A5C19051 /* SyndicationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyndicationClient.swift; sourceTree = "<group>"; };
+		CE455F06F6F0ABBFD298BC2F /* ThreadSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSelection.swift; sourceTree = "<group>"; };
+		DBC6D1962B38E0F0D004F1FF /* Humanize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Humanize.swift; sourceTree = "<group>"; };
+		DD83F74E67363FA079F5AB59 /* HydrationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydrationEngine.swift; sourceTree = "<group>"; };
+		DF18971A37DC06D6359AF59A /* Twixodus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twixodus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2AEF4D9BCB66DFA37CB864 /* PythonCompat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonCompat.swift; sourceTree = "<group>"; };
+		E971D1C161580BB157C0C0D9 /* ImportStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportStepView.swift; sourceTree = "<group>"; };
+		EED4939B1E57B5B521D97371 /* ThreadBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadBuilder.swift; sourceTree = "<group>"; };
+		EFDEB01C2C79AC17A9D88007 /* EntryComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryComposerTests.swift; sourceTree = "<group>"; };
+		F132C5147E7A20A6527155D5 /* ThreadBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadBuilderTests.swift; sourceTree = "<group>"; };
+		F7920F89D5A4919A6BD33B74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FEAAF8D92B8C7EBFDC16A5A8 /* ZipExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipExtractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0D692C4636D447F5D617597D = {
+			isa = PBXGroup;
+			children = (
+				3EC59928ECDD94403741B590 /* tools */,
+				1B036181F26AA4AD150C35EA /* Twixodus */,
+				D0941F31062EEC7D66F091F7 /* TwixodusTests */,
+				A64C3773BCB892992A810F0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		13C5817751B82B3B420D6A9D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				460A2C5AE3585C3C47E70393 /* AppIcon.icon */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1B036181F26AA4AD150C35EA /* Twixodus */ = {
+			isa = PBXGroup;
+			children = (
+				44365B9ACE71638C7BD6103C /* App */,
+				EB7BC3040C4C582E0AC73A21 /* Pipeline */,
+				13C5817751B82B3B420D6A9D /* Resources */,
+			);
+			path = Twixodus;
+			sourceTree = "<group>";
+		};
+		396699DF6CCD22B03DC85D09 /* dump */ = {
+			isa = PBXGroup;
+			children = (
+				26AB84584C8256F7445A5CED /* main.swift */,
+			);
+			path = dump;
+			sourceTree = "<group>";
+		};
+		3EC59928ECDD94403741B590 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				396699DF6CCD22B03DC85D09 /* dump */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		44365B9ACE71638C7BD6103C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				956DFCC5291B4BA358D53E83 /* AppModel.swift */,
+				7DFF8928A0555112E99AECE4 /* AppSettings.swift */,
+				16C342A93F458E978CCD5967 /* OllamaStatus.swift */,
+				7681517CC38ACA28E67C090A /* TwixodusApp.swift */,
+				523F43C52EFCEFAF61DF346B /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		523F43C52EFCEFAF61DF346B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D9209319663BC2E50B676CB /* ConfigureStepView.swift */,
+				F7920F89D5A4919A6BD33B74 /* ContentView.swift */,
+				566C64110C9C5674452C269C /* DoneStepView.swift */,
+				0F7BA038838E671D6CBEE921 /* DropStepView.swift */,
+				4C622F380121611100F4986B /* GlassStyle.swift */,
+				E971D1C161580BB157C0C0D9 /* ImportStepView.swift */,
+				227931DAB2441807149F22CC /* RetrieveStepView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A64C3773BCB892992A810F0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40708F4BE27A5BA385953BAE /* twixodus-dump */,
+				DF18971A37DC06D6359AF59A /* Twixodus.app */,
+				ACF6028D7787BA8B3A9A9C7B /* TwixodusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0941F31062EEC7D66F091F7 /* TwixodusTests */ = {
+			isa = PBXGroup;
+			children = (
+				A1A5C6E79B46E6CB7397E00B /* .swiftlint.yml */,
+				EFDEB01C2C79AC17A9D88007 /* EntryComposerTests.swift */,
+				8742F114DE179F207ACBDE8F /* HydrationTests.swift */,
+				46746F59235B7C982FBBC89F /* ImportEngineTests.swift */,
+				9FC489231D8A7E0BF838EFBC /* ImportHistoryTests.swift */,
+				960526DE3743EF40761E2C0D /* LinkExpansionTests.swift */,
+				294453F9F3D783E55618E588 /* LoaderAndCLITests.swift */,
+				1DC63D30746DFCF8B351C809 /* OllamaClientTests.swift */,
+				F132C5147E7A20A6527155D5 /* ThreadBuilderTests.swift */,
+				019E8371526C53F835D74A08 /* ThreadCategorizerTests.swift */,
+				13A3BD68806DDEE3FF9931A3 /* ThreadSelectionTests.swift */,
+				2FB1391E8D530704E3F0F6CC /* ThreadSplitterTests.swift */,
+			);
+			path = TwixodusTests;
+			sourceTree = "<group>";
+		};
+		EB7BC3040C4C582E0AC73A21 /* Pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				0EE91ECE5E2319BE01E80E12 /* ArchiveLoading.swift */,
+				BFD87AB5F3C538F362FCA69D /* DayOneCLI.swift */,
+				A08EF04229EA3423CCB0D82B /* EntryComposer.swift */,
+				DBC6D1962B38E0F0D004F1FF /* Humanize.swift */,
+				DD83F74E67363FA079F5AB59 /* HydrationEngine.swift */,
+				A44B4A142872C1766E43C3D1 /* HydrationOverlay.swift */,
+				0D4B805F8CC43F0EA0080A1F /* HydrationPlanner.swift */,
+				2CBF42A6DDED8B5D24F6F2F6 /* HydrationStore.swift */,
+				7A2158E835265213A5FB282C /* ImportEngine.swift */,
+				C1EA0C48B92E595E772C5EB6 /* ImportHistory.swift */,
+				6666DDC5182950C6AFCAE038 /* ImportLedger.swift */,
+				22F4AD5548CA8698EA9116C0 /* LinkExpansion.swift */,
+				3115B407C377BCF15E5FBACC /* Models.swift */,
+				029271ADAA1CF58EB3757782 /* OllamaClient.swift */,
+				DF2AEF4D9BCB66DFA37CB864 /* PythonCompat.swift */,
+				C6B0F080E6114564A5C19051 /* SyndicationClient.swift */,
+				EED4939B1E57B5B521D97371 /* ThreadBuilder.swift */,
+				79C055F4D2E1CD8BE8B61B80 /* ThreadCategorizer.swift */,
+				CE455F06F6F0ABBFD298BC2F /* ThreadSelection.swift */,
+				68BE3DD1FA16F0D7711E0F09 /* ThreadSplitter.swift */,
+				2EA68686B36ECE3206E44B90 /* TwitterArchiveLoader.swift */,
+				FEAAF8D92B8C7EBFDC16A5A8 /* ZipExtractor.swift */,
+			);
+			path = Pipeline;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BBF49830A199386D5A8E224 /* twixodus-dump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49673A677AF46C77ADC80936 /* Build configuration list for PBXNativeTarget "twixodus-dump" */;
+			buildPhases = (
+				BFEBA2EA95F34A04EB894FC6 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "twixodus-dump";
+			packageProductDependencies = (
+			);
+			productName = "twixodus-dump";
+			productReference = 40708F4BE27A5BA385953BAE /* twixodus-dump */;
+			productType = "com.apple.product-type.tool";
+		};
+		E81A8B6C3D43A1E523E239AD /* TwixodusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDED2754F187ED002DF04610 /* Build configuration list for PBXNativeTarget "TwixodusTests" */;
+			buildPhases = (
+				9C94AEFF958015DF0E83B6C5 /* Sources */,
+				33FDBE1B89148B971C80148E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwixodusTests;
+			packageProductDependencies = (
+			);
+			productName = TwixodusTests;
+			productReference = ACF6028D7787BA8B3A9A9C7B /* TwixodusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC5BE26A15ED52F1ED6ECF68 /* Twixodus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3CD9A80B2910888A1B77095 /* Build configuration list for PBXNativeTarget "Twixodus" */;
+			buildPhases = (
+				1A7AC9BA1216A83CEEAA3847 /* Sources */,
+				5C9F0C09BF5C15ACD3573010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twixodus;
+			packageProductDependencies = (
+			);
+			productName = Twixodus;
+			productReference = DF18971A37DC06D6359AF59A /* Twixodus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF838F2FE22C51E5CE5E9771 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3BBF49830A199386D5A8E224 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					E81A8B6C3D43A1E523E239AD = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					FC5BE26A15ED52F1ED6ECF68 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 9561CD92A702CD6C702F80E8 /* Build configuration list for PBXProject "Twixodus" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 0D692C4636D447F5D617597D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A64C3773BCB892992A810F0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC5BE26A15ED52F1ED6ECF68 /* Twixodus */,
+				E81A8B6C3D43A1E523E239AD /* TwixodusTests */,
+				3BBF49830A199386D5A8E224 /* twixodus-dump */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33FDBE1B89148B971C80148E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BC151D6BF1B25BEEBAAC734 /* .swiftlint.yml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C9F0C09BF5C15ACD3573010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E424E765B8AFF85CA358DDC2 /* AppIcon.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A7AC9BA1216A83CEEAA3847 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B8B4E4407AEF9859B5BA78E /* AppModel.swift in Sources */,
+				ECC0AECCC7C3896E88F856C2 /* AppSettings.swift in Sources */,
+				7F47C721780922536B73787A /* ArchiveLoading.swift in Sources */,
+				6A6A524646BC6BD201E6D8CD /* ConfigureStepView.swift in Sources */,
+				14C2DC48D974E0A3B6E521E0 /* ContentView.swift in Sources */,
+				73C3594291F082743B9EF346 /* DayOneCLI.swift in Sources */,
+				23A3A49F1F6C23DED7B31C7A /* DoneStepView.swift in Sources */,
+				9505D0C9AB3EFC3113C64F0F /* DropStepView.swift in Sources */,
+				320F989253309FA0EC470B83 /* EntryComposer.swift in Sources */,
+				49DB9AD51FBDED8F7D66760C /* GlassStyle.swift in Sources */,
+				E5B1851ED93F9D13A3EB996D /* Humanize.swift in Sources */,
+				93A87BDFEE4C553D5629060B /* HydrationEngine.swift in Sources */,
+				99C9387ACF81C4C0FD3251A6 /* HydrationOverlay.swift in Sources */,
+				49418C4AD683C52A4872D9CF /* HydrationPlanner.swift in Sources */,
+				040C76BD2BE8EBD9FACD11BC /* HydrationStore.swift in Sources */,
+				9B9781A33E54B4C2FF298D91 /* ImportEngine.swift in Sources */,
+				19C3AA77FCB37B40C0D9D57A /* ImportHistory.swift in Sources */,
+				D0C9D6A0E0FD93D0CA255BDE /* ImportLedger.swift in Sources */,
+				B2E5B40D0F297C82D794E3CF /* ImportStepView.swift in Sources */,
+				CEC737620BEC3C67BE8A058C /* LinkExpansion.swift in Sources */,
+				89C5F63752803BECC97DB818 /* Models.swift in Sources */,
+				91DFAB6BBAB53B09273C9C8A /* OllamaClient.swift in Sources */,
+				EC6F56BB72CAFEFFD6121A24 /* OllamaStatus.swift in Sources */,
+				75481876CC5DB818001AF52E /* PythonCompat.swift in Sources */,
+				932BC70F0877C4C5928D514D /* RetrieveStepView.swift in Sources */,
+				1ECAAEB90A7E289A316041DB /* SyndicationClient.swift in Sources */,
+				CF762F0C6C64AC727667F694 /* ThreadBuilder.swift in Sources */,
+				F3FB004FC73A0F00AEC18621 /* ThreadCategorizer.swift in Sources */,
+				9B8520B7FDDCBA0A0DFA6DFC /* ThreadSelection.swift in Sources */,
+				9043523F0B2414A963AF9C18 /* ThreadSplitter.swift in Sources */,
+				A3B721E4EAF426B787C51DF4 /* TwitterArchiveLoader.swift in Sources */,
+				7B237D6DEEC3B1FBB7AF9FC8 /* TwixodusApp.swift in Sources */,
+				B515985A96664ABA5A7695EE /* ZipExtractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C94AEFF958015DF0E83B6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CF4ECDAB575EA650734C49 /* ArchiveLoading.swift in Sources */,
+				3F6D237DD9900661C01DD409 /* DayOneCLI.swift in Sources */,
+				264998D15C5542F1103BCC01 /* EntryComposer.swift in Sources */,
+				44E57BBA66F264D5F05D7DFF /* EntryComposerTests.swift in Sources */,
+				EC562589A878B19A684FE114 /* Humanize.swift in Sources */,
+				190FA82B62C4799EE91FFD9E /* HydrationEngine.swift in Sources */,
+				E21DE23A13AF07E4170A0502 /* HydrationOverlay.swift in Sources */,
+				1670A185574F2C37DEC21D62 /* HydrationPlanner.swift in Sources */,
+				537ECE0CF8EA64ACCD0BD83D /* HydrationStore.swift in Sources */,
+				BE0916F8C98A263A33AAA0B0 /* HydrationTests.swift in Sources */,
+				D27170435C166D722464CD8F /* ImportEngine.swift in Sources */,
+				43DEF24146C000E5F9B65BBC /* ImportEngineTests.swift in Sources */,
+				400ABFF8F0DFBE7160EDB06B /* ImportHistory.swift in Sources */,
+				5EF048B475A0B0B73FE0625E /* ImportHistoryTests.swift in Sources */,
+				5705D8920001722A1A9B830B /* ImportLedger.swift in Sources */,
+				D589584411A65023CF7E2C37 /* LinkExpansion.swift in Sources */,
+				2A1D35161ED6E77DDF67CF55 /* LinkExpansionTests.swift in Sources */,
+				0EF9F5A8EBC3660DBF7B46BA /* LoaderAndCLITests.swift in Sources */,
+				5710F8126A94D78763790C16 /* Models.swift in Sources */,
+				2BDCA6E78EC388BE0B5686F5 /* OllamaClient.swift in Sources */,
+				A2B4C11D29BD4B39129EA575 /* OllamaClientTests.swift in Sources */,
+				B88D78A0598B9862E7A7546C /* PythonCompat.swift in Sources */,
+				297B2CCBB0CB31DD6F7A12A1 /* SyndicationClient.swift in Sources */,
+				A61A368D929FA3989BD443E5 /* ThreadBuilder.swift in Sources */,
+				EBA2A0B6F21B8DC73ECFC269 /* ThreadBuilderTests.swift in Sources */,
+				6A4842FAB20D413ED9CF9F94 /* ThreadCategorizer.swift in Sources */,
+				CEE7D5F9BBE8A6889CDB4883 /* ThreadCategorizerTests.swift in Sources */,
+				8A83898E18E319E59332EEA9 /* ThreadSelection.swift in Sources */,
+				AE4043C80D62440C198625C3 /* ThreadSelectionTests.swift in Sources */,
+				B57BF22639BB570B6F3FAD0C /* ThreadSplitter.swift in Sources */,
+				84CEF41B6E61B1233EF4867B /* ThreadSplitterTests.swift in Sources */,
+				AED98E19E7CBFE3CF35C89DB /* TwitterArchiveLoader.swift in Sources */,
+				29A975ACE07F580311F55D26 /* ZipExtractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFEBA2EA95F34A04EB894FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6D12258A0B14D3B96BCDCF /* ArchiveLoading.swift in Sources */,
+				14141078EA451553978F00E3 /* DayOneCLI.swift in Sources */,
+				365CFCFF37F5F0A7C0A6D17F /* EntryComposer.swift in Sources */,
+				C562444FB103778F0F0AF49F /* Humanize.swift in Sources */,
+				90CA958353F3C8DD28D342C6 /* HydrationEngine.swift in Sources */,
+				EDD1F806A550BD548C6269B5 /* HydrationOverlay.swift in Sources */,
+				0C259B1A92779299D0ED5186 /* HydrationPlanner.swift in Sources */,
+				4F013609E15A853980817D1E /* HydrationStore.swift in Sources */,
+				EDCED94C5C1199C6B54C7F6C /* ImportEngine.swift in Sources */,
+				9BE54E2896C34CCE27D3066E /* ImportHistory.swift in Sources */,
+				C4D691F101910E0AC8BCEF16 /* ImportLedger.swift in Sources */,
+				B67CC1B6E5B765A15C8084F9 /* LinkExpansion.swift in Sources */,
+				D08910DE2E4115055F7979A9 /* Models.swift in Sources */,
+				A03EE61D9C5579A212385546 /* OllamaClient.swift in Sources */,
+				584EDA459F1E6A913459B465 /* PythonCompat.swift in Sources */,
+				9C791628BC237252E3291E85 /* SyndicationClient.swift in Sources */,
+				9EB07333801E39A777A6448B /* ThreadBuilder.swift in Sources */,
+				FBD1B70B9061F9100830D5F7 /* ThreadCategorizer.swift in Sources */,
+				1B71C6263D234723B6496A6B /* ThreadSelection.swift in Sources */,
+				DA3C514C27792220366F398E /* ThreadSplitter.swift in Sources */,
+				3C6B4C7417A116D8F06E4687 /* TwitterArchiveLoader.swift in Sources */,
+				77AC052CD371F8096F124D0F /* ZipExtractor.swift in Sources */,
+				15C80E46C295B043642EC901 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1239E40FFF1A44C81F894357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		13F25EFA6A8CA9DFA16AA488 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		217B8DA3DD3DB805B5580AA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus.dump;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5525C8A4825CB41A2FCF7DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Evgenii Ostrovskii";
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus;
+				PRODUCT_NAME = Twixodus;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8D22067A3587AA5917CC96EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus.dump;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		98915144ABD6B466BA9EC2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A4225C2649841A46F7A824BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© Evgenii Ostrovskii";
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.evgenii.twixodus;
+				PRODUCT_NAME = Twixodus;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EBCEC65ACD8F197922E5D2C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49673A677AF46C77ADC80936 /* Build configuration list for PBXNativeTarget "twixodus-dump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				217B8DA3DD3DB805B5580AA7 /* Debug */,
+				8D22067A3587AA5917CC96EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9561CD92A702CD6C702F80E8 /* Build configuration list for PBXProject "Twixodus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F25EFA6A8CA9DFA16AA488 /* Debug */,
+				EBCEC65ACD8F197922E5D2C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3CD9A80B2910888A1B77095 /* Build configuration list for PBXNativeTarget "Twixodus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5525C8A4825CB41A2FCF7DBB /* Debug */,
+				A4225C2649841A46F7A824BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CDED2754F187ED002DF04610 /* Build configuration list for PBXNativeTarget "TwixodusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98915144ABD6B466BA9EC2D9 /* Debug */,
+				1239E40FFF1A44C81F894357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF838F2FE22C51E5CE5E9771 /* Project object */;
+}
