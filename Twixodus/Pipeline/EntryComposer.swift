@@ -55,15 +55,10 @@ public enum EntryComposer {
                 entryDate = currentTweetDate
             }
 
-            // With xcancel enabled, links inside the tweet's own text that
-            // lead to tweets are repointed too (labels stay as posted).
-            entryText += (config.useXcancelLinks
-                ? XcancelLinks.rewriteTweetLinks(in: tweet.fullText)
-                : tweet.fullText) + "\n\n"
+            entryText += tweet.fullText + "\n\n"
 
             if let quote = tweet.hydratedQuote {
-                entryText += quoteBlock(quote, quotingDate: currentTweetDate,
-                                        useXcancelLinks: config.useXcancelLinks) + "\n\n"
+                entryText += quoteBlock(quote, quotingDate: currentTweetDate) + "\n\n"
             }
 
             var metrics: [String] = []
@@ -71,15 +66,14 @@ public enum EntryComposer {
             let retweets = tweet.retweetCount
 
             if let username = config.currentUsername, !username.isEmpty {
-                let host = config.useXcancelLinks ? XcancelLinks.host : "twitter.com"
-                let tweetURL = "https://\(host)/\(username)/status/\(tweet.idStr)"
+                let tweetURL = "https://twitter.com/\(username)/status/\(tweet.idStr)"
                 if likes > 0 {
                     metrics.append("[Likes: \(likes)](\(tweetURL)/likes) ⭐️")
                 }
                 if retweets > 0 {
                     metrics.append("[Retweets: \(retweets)](\(tweetURL)/retweets) 🔁")
                 }
-                metrics.append("[Open on \(host)](\(tweetURL))")
+                metrics.append("[Open on twitter.com](\(tweetURL))")
             } else {
                 if likes > 0 {
                     metrics.append("Likes: \(likes) ⭐️")
@@ -136,9 +130,8 @@ public enum EntryComposer {
     ///
     /// The year is added only when the quoted tweet is from a different year
     /// than the quoting one.
-    static func quoteBlock(_ quote: HydratedQuote, quotingDate: Date, useXcancelLinks: Bool) -> String {
-        let host = useXcancelLinks ? XcancelLinks.host : "twitter.com"
-        let url = "https://\(host)/\(quote.screenName)/status/\(quote.statusId)"
+    static func quoteBlock(_ quote: HydratedQuote, quotingDate: Date) -> String {
+        let url = "https://twitter.com/\(quote.screenName)/status/\(quote.statusId)"
 
         var label = quote.name
         if let date = quote.createdAt {
@@ -243,8 +236,7 @@ public enum EntryComposer {
             let rest = mentionRunRegex.sub("", entryText).pyStrip()
             let mentionsStr = mentions.joined(separator: " ")
             entryText = "\(rest)\n\n"
-            let host = config.useXcancelLinks ? XcancelLinks.host : "twitter.com"
-            let replyToURL = "https://\(host)/i/web/status/\(replyToId)"
+            let replyToURL = "https://twitter.com/i/web/status/\(replyToId)"
             entryText += "In response to [this tweet](\(replyToURL)), "
                 + "which is part of the conversation with \(mentionsStr)\n"
         } else if config.showTweetSource {

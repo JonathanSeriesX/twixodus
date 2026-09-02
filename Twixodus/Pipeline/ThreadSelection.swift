@@ -191,11 +191,11 @@ public enum ThreadSelection {
     }
 
     /// Builds a link to a tweet, falling back to the account-agnostic URL.
-    public static func tweetURL(tweetId: String, username: String?, host: String = "twitter.com") -> String {
+    public static func tweetURL(tweetId: String, username: String?) -> String {
         if let username, !username.isEmpty {
-            return "https://\(host)/\(username)/status/\(tweetId)"
+            return "https://twitter.com/\(username)/status/\(tweetId)"
         }
-        return "https://\(host)/i/web/status/\(tweetId)"
+        return "https://twitter.com/i/web/status/\(tweetId)"
     }
 
     private static let reportDateFormatter = PipelineDates.formatter("dd MMMM yyyy, HH:mm")
@@ -203,7 +203,7 @@ public enum ThreadSelection {
     /// Formats the list of re-imported threads into a reminder to delete the
     /// older duplicates.
     public static func formatReimportReport(
-        _ reimported: [ImportedEntry], username: String?, linkHost: String = "twitter.com"
+        _ reimported: [ImportedEntry], username: String?
     ) -> String {
         let line = String(repeating: "=", count: 72)
         let header = """
@@ -232,7 +232,7 @@ public enum ThreadSelection {
                    Journal: \(entry.journal)
                    Old entry to delete: \(oldEntryStr)
                    New entry: \(entry.tweetCount) tweets
-                   First tweet: \(tweetURL(tweetId: entry.tweetId, username: username, host: linkHost))
+                   First tweet: \(tweetURL(tweetId: entry.tweetId, username: username))
 
                 """)
         }

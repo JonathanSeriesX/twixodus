@@ -194,7 +194,7 @@ final class HydrationTests: XCTestCase {
             createdAt: PipelineDates.date(2026, 1, 12, 15, 0, 0),
             text: "\"Gen Z has cut down on their effort at work,\" per YF.")
         let block = EntryComposer.quoteBlock(
-            quote, quotingDate: PipelineDates.date(2026, 1, 14), useXcancelLinks: false)
+            quote, quotingDate: PipelineDates.date(2026, 1, 14))
         let marker = EntryComposer.blockquoteMarker
         XCTAssertEqual(block, marker
             + "Quoting [unusual_whales from Jan 12](https://twitter.com/unusual_whales/status/555):\n"
@@ -207,7 +207,7 @@ final class HydrationTests: XCTestCase {
             statusId: "5", screenName: "a", name: "Somebody",
             createdAt: PipelineDates.date(2013, 5, 1), text: "old wisdom")
         let block = EntryComposer.quoteBlock(
-            quote, quotingDate: PipelineDates.date(2026, 1, 14), useXcancelLinks: false)
+            quote, quotingDate: PipelineDates.date(2026, 1, 14))
         XCTAssertTrue(block.contains("Somebody from May 1, 2013"))
     }
 
@@ -225,14 +225,6 @@ final class HydrationTests: XCTestCase {
         XCTAssertTrue(entry.contains("> quoted line"))
         // ...while a ">" typed in tweet text stays escaped (see escapeMarkdown).
         XCTAssertFalse(entry.contains(EntryComposer.blockquoteMarker))
-    }
-
-    func testQuoteBlockUsesXcancelHost() {
-        let quote = HydratedQuote(
-            statusId: "5", screenName: "a", name: "S", createdAt: nil, text: "t")
-        let block = EntryComposer.quoteBlock(
-            quote, quotingDate: PipelineDates.date(2026, 1, 1), useXcancelLinks: true)
-        XCTAssertTrue(block.contains("https://xcancel.com/a/status/5"))
     }
 
     // MARK: - Retryable records

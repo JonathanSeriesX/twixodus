@@ -239,7 +239,6 @@ struct ConfigureStepView: View {
                 note("Turn this off if your account is gone forever — entries then get no tweet links.")
             }
             Toggle("End entries with “Sent from <client>”", isOn: $settings.showTweetSource)
-            Toggle("Point tweet links at xcancel.com instead of twitter.com", isOn: $settings.useXcancelLinks)
         }
     }
 

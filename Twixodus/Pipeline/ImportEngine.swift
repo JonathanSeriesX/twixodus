@@ -242,9 +242,7 @@ public final class ImportEngine {
         // ---- Step 7: remind the user to delete re-imported duplicates -----
         if !reimported.isEmpty {
             result.reimportReport = ThreadSelection.formatReimportReport(
-                reimported, username: config.currentUsername,
-                linkHost: config.useXcancelLinks ? XcancelLinks.host : "twitter.com"
-            )
+                reimported, username: config.currentUsername)
         }
 
         return result

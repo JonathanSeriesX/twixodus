@@ -108,7 +108,7 @@ public final class HydrationStore {
     }
 
     public convenience init(for ref: TwitterArchiveRef) {
-        self.init(archiveRoot: ref.dataFolder.deletingLastPathComponent())
+        self.init(archiveRoot: ref.archiveRoot)
     }
 
     /// twitter-2026-08-17-<hash> → twitter-2026-08-17-hydration, next to the

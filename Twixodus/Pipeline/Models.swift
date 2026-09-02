@@ -196,19 +196,32 @@ public struct UserMention {
 public typealias TweetThread = [Tweet]
 
 /// Where the unpacked Twitter archive lives on disk.
+///
+/// Twitter has shipped two layouts of the data/ folder. Archives exported
+/// since ~2020 hold the tweets in tweets.js (+ tweets-part<N>.js) and the
+/// media in tweets_media/; older exports used the singular tweet.js and
+/// tweet_media/. The loader works out which one it is looking at, and this
+/// ref records the resolved paths so nothing downstream has to care.
 public struct TwitterArchiveRef: Sendable {
     /// .../twitter-<date>-<hash>/data
     public let dataFolder: URL
-    /// tweets.js, tweets-part1.js, ... in order.
+    /// tweets.js, tweets-part1.js, ... (or the older tweet.js, ...) in order.
     public let tweetsJSPaths: [URL]
+    /// The folder holding the archived photo and video files: tweets_media/
+    /// in current archives, tweet_media/ in the older layout.
+    public let mediaFolder: URL
+    /// The unpacked archive as a whole — normally the data folder's parent
+    /// (twitter-<date>-<hash>/). When the user dropped the data folder itself
+    /// with nothing around it, this is that folder: it is the thing the
+    /// hydration cache is placed next to.
+    public let archiveRoot: URL
 
-    public init(dataFolder: URL, tweetsJSPaths: [URL]) {
+    public init(dataFolder: URL, tweetsJSPaths: [URL], mediaFolder: URL? = nil, archiveRoot: URL? = nil) {
         self.dataFolder = dataFolder
         self.tweetsJSPaths = tweetsJSPaths
+        self.mediaFolder = mediaFolder ?? dataFolder.appendingPathComponent("tweets_media")
+        self.archiveRoot = archiveRoot ?? dataFolder.deletingLastPathComponent()
     }
-
-    /// The folder holding the archived photo and video files.
-    public var mediaFolder: URL { dataFolder.appendingPathComponent("tweets_media") }
 
     /// The file holding the account metadata (username, account ID).
     public var accountJSPath: URL { dataFolder.appendingPathComponent("account.js") }
@@ -281,8 +294,6 @@ public struct ImportConfig {
     public var ignoreRetweets: Bool
     /// End entries with "Sent from <client>" (Twitter for Android, etc.).
     public var showTweetSource: Bool
-    /// Point links that lead to tweets at xcancel.com instead of twitter.com.
-    public var useXcancelLinks: Bool
     /// Only threads started between these two dates are processed
     /// (naive UTC, same semantics as the Python config dates).
     public var startDate: Date
@@ -316,7 +327,6 @@ public struct ImportConfig {
         debugTweetIDs: Set<String> = [],
         ignoreRetweets: Bool = false,
         showTweetSource: Bool = true,
-        useXcancelLinks: Bool = false,
         startDate: Date = PipelineDates.date(2006, 3, 21),
         endDate: Date = PipelineDates.date(2069, 4, 20),
         lastCoveredThrough: Date? = nil,
@@ -336,7 +346,6 @@ public struct ImportConfig {
         self.debugTweetIDs = debugTweetIDs
         self.ignoreRetweets = ignoreRetweets
         self.showTweetSource = showTweetSource
-        self.useXcancelLinks = useXcancelLinks
         self.startDate = startDate
         self.endDate = endDate
         self.lastCoveredThrough = lastCoveredThrough
