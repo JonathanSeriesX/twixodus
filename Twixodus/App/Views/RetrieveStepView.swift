@@ -56,14 +56,7 @@ struct RetrieveStepView: View {
                 } header: {
                     Text("What can be retrieved")
                 } footer: {
-                    Text("Covers the \(model.retrieveScope) tweets the next import will "
-                        + "actually bring in — narrow the run (date range, per-run limit, "
-                        + "specific tweets) and this narrows with it.\n\n"
-                        + "Uses Twitter's public embed endpoint — no login or API key. "
-                        + "One polite request per item (~2 per second), so large "
-                        + "batches take a few minutes. Everything is saved next to your "
-                        + "archive in “\(model.hydrationStore?.folder.lastPathComponent ?? "…-hydration")” "
-                        + "and reused by every later run — the archive itself is never modified.")
+                    Text(planFooter)
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
@@ -71,6 +64,23 @@ struct RetrieveStepView: View {
             .formStyle(.grouped)
             Spacer(minLength: 0)
         }
+    }
+
+    /// Kept out of the `Text(...)` call on purpose. As one long `+` chain
+    /// with interpolations passed straight to an overloaded initializer, this
+    /// string made older Swift compilers (Xcode 16) give up type-checking the
+    /// expression. A plain `String` property is resolved on its own, cheaply.
+    private var planFooter: String {
+        let folder = model.hydrationStore?.folder.lastPathComponent ?? "…-hydration"
+        return """
+        Covers the \(model.retrieveScope) tweets the next import will actually bring in — \
+        narrow the run (date range, per-run limit, specific tweets) and this narrows with it.
+
+        Uses Twitter's public embed endpoint — no login or API key. One polite request \
+        per item (~2 per second), so large batches take a few minutes. Everything is saved \
+        next to your archive in “\(folder)” and reused by every later run — the archive \
+        itself is never modified.
+        """
     }
 
     @ViewBuilder
@@ -98,8 +108,8 @@ struct RetrieveStepView: View {
                 Label("Everything retrievable has been retrieved.", systemImage: "checkmark.circle.fill")
                     .foregroundStyle(.green)
             } else if plan.totalPending == 0 {
-                Label("\(plan.totalRetryable) item\(plan.totalRetryable == 1 ? "" : "s") didn't come "
-                    + "through. Most of those are genuinely deleted or private.",
+                let plural = plan.totalRetryable == 1 ? "" : "s"
+                Label("\(plan.totalRetryable) item\(plural) didn't come through. Most of those are genuinely deleted or private.",
                       systemImage: "arrow.clockwise.circle.fill")
                     .foregroundStyle(.orange)
             }
