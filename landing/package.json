@@ -3,7 +3,7 @@
   "version": "0.9.0",
   "private": true,
   "type": "module",
-  "homepage": "https://github.com/JonathanSeriesX/dayoneXtwitter",
+  "homepage": "https://github.com/JonathanSeriesX/twixodus",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
