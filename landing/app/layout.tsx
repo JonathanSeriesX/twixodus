@@ -78,6 +78,13 @@ export default function RootLayout({
           <LiquidPointer />
           {children}
         </ThemeProvider>
+        {/* Cloudflare Web Analytics. The token is public (it ships in the HTML),
+            so it lives here, not in an env var. */}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"57f8491eea504c729ef61c0847d5d43b"}'
+        />
       </body>
     </html>
   );
