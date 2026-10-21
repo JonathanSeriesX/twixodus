@@ -60,6 +60,8 @@ export const viewport: Viewport = {
   ],
 };
 
+const beaconToken = process.env.NEXT_PUBLIC_CF_BEACON_TOKEN;
+
 export default function RootLayout({
   children,
 }: {
@@ -78,13 +80,15 @@ export default function RootLayout({
           <LiquidPointer />
           {children}
         </ThemeProvider>
-        {/* Cloudflare Web Analytics. The token is public (it ships in the HTML),
-            so it lives here, not in an env var. */}
-        <script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token":"57f8491eea504c729ef61c0847d5d43b"}'
-        />
+        {/* Cloudflare Web Analytics. Netlify sets the token for production
+            only, so deploy previews, forks and local builds stay untracked. */}
+        {beaconToken && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={JSON.stringify({ token: beaconToken })}
+          />
+        )}
       </body>
     </html>
   );
