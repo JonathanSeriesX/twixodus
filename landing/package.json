@@ -1,9 +1,20 @@
 {
   "name": "twixodus-site",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "private": true,
+  "description": "The ultimate tool to seamlessly import your Twitter archive into the Day One journaling app.",
+  "author": "Evgenii",
+  "license": "MIT",
+  "homepage": "https://twixodus.evgenii.org",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanSeriesX/twixodus",
+    "directory": "landing"
+  },
+  "bugs": {
+    "url": "https://github.com/JonathanSeriesX/twixodus/issues"
+  },
   "type": "module",
-  "homepage": "https://github.com/JonathanSeriesX/twixodus",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,10 +23,10 @@
   },
   "dependencies": {
     "basiclightbox": "^5.0.4",
-    "next": "^16.3.6",
+    "next": "^16.4.3",
     "next-themes": "^0.4.6",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-markdown": "^10.1.0",
     "remark-gfm": "^4.0.1"
   },
@@ -24,14 +35,14 @@
     "@tailwindcss/postcss": "^4.3.3",
     "@types/basiclightbox": "^5.0.4",
     "@types/hast": "^3.0.5",
-    "@types/node": "^26.6.3",
+    "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "eslint": "^10.11.0",
-    "eslint-config-next": "^16.3.6",
-    "postcss": "^8.5.28",
+    "eslint": "^10.13.0",
+    "eslint-config-next": "^16.4.3",
+    "postcss": "^8.5.32",
     "tailwindcss": "^4.3.3",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@11.22.0"
+  "packageManager": "pnpm@12.15.0"
 }
